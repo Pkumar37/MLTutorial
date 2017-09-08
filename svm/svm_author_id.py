@@ -35,14 +35,14 @@ labels_train = labels_train[:len(labels_train)/100]
 
 t0 = time()
 linear_kernel_svm.fit(features_train, labels_train)
-print "training time with SVM's linear kernel", time() - t0
+print ("training time with SVM's linear kernel", time() - t0)
 
 t1 = time()
 pred = linear_kernel_svm.predict(features_test)
-print "prediction time with SVM's linear kernel", time() - t1
+print ("prediction time with SVM's linear kernel", time() - t1)
 
 acc = accuracy_score(labels_test, pred)
-print acc
+print (acc)
 
 def time_with_power(power, people,times):
     results = nd.random.power(power, people)
